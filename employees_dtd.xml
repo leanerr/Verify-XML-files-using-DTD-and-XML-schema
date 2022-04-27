@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employees.dtd">
+
+<employees>
+  <employee code="e1">
+    <name>
+      <lastname>Losa</lastname>
+      <firstname>Loretta</firstname>
+    </name>
+    <phone>
+      713-868-5455
+    </phone>
+    <phone>
+      713-868-5466
+    </phone>
+    <hiredate>2009-05-04</hiredate>
+    <devices>
+      <device type="t2">
+        <item id="p111">Printer</item>
+        <price>111.00</price>
+      </device>
+      <device type="t1">
+        <item id="p222">Laptop</item>
+        <price>989.00</price>
+      </device>
+    </devices>
+  </employee>
+  <employee code="e2">
+    <name>
+      <lastname>Maina</lastname>
+      <firstname>Oswald</firstname>
+    </name>
+    <age>
+      32
+    </age>
+    <phone>
+      303-337-3148
+    </phone>
+    <hiredate>2017-10-09</hiredate>
+    <devices>
+      <device type="t1">
+        <item id="p333">Desktop</item>
+        <price>2995.00</price>
+      </device>
+      <device type="t2">
+        <item id="p444">Scanner</item>
+        <price>200.00</price>
+      </device>
+    </devices>
+  </employee>
+  <employee code="e3">
+    <name>
+      <lastname>Shirazi</lastname>
+      <firstname>Simin</firstname>
+    </name>
+    <age>
+      46
+    </age>
+    <phone>
+      810-984-6165
+    </phone>
+    <hiredate>2020-09-24</hiredate>
+    <devices>
+      <device type="t2">
+        <item id="p555">Keyboard</item>
+        <price>129.00</price>
+      </device>
+      <device type="t2">
+        <item id="p666">Mouse</item>
+        <price>25.00</price>
+      </device>
+    </devices>
+  </employee>
+</employees>

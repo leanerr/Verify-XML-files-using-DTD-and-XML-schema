@@ -1,0 +1,55 @@
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="priceRestrict">
+	  <xs:restriction base="xs:float">
+		<xs:minExclusive value="20"/>
+		<xs:maxExclusive value="3000"/>
+	  </xs:restriction> 
+	</xs:simpleType>
+  <xs:element name="employees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="employee" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="lastname"/>
+                    <xs:element type="xs:string" name="firstname"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:float" name="age" minOccurs="0"/>
+              <xs:element type="xs:string" name="phone" maxOccurs="unbounded" minOccurs="0"/>
+              <xs:element type="xs:date" name="hiredate"/>
+              <xs:element name="devices">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="device" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="item">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="id" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="price" maxOccurs="1" minOccurs="1" type="priceRestrict" />
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="type" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="code" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
