@@ -1,0 +1,7 @@
+/employees/employee[@code='e1' or @code='e3']/name/firstname
+
+
+/employees/employee/devices/device[price > 150]
+
+
+
