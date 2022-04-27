@@ -1,0 +1,14 @@
+﻿<!-- Created with Liquid Studio 2020 (https://www.liquid-technologies.com) -->
+<?xml encoding="UTF-8"?>
+<!ELEMENT employees (employee)+>
+<!ELEMENT employee (name,age?,phone+,hiredate,devices)>
+<!ELEMENT name (lastname,firstname)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT hiredate (#PCDATA)>
+<!ELEMENT devices (device)+>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT device (item,price)>
+<!ELEMENT item (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
