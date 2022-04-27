@@ -1,0 +1,52 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT employees (employee)+>
+<!ATTLIST employees
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT employee (name,age?,phone+,hiredate,devices)>
+<!ATTLIST employee
+  xmlns CDATA #FIXED ''
+  code NMTOKEN #REQUIRED>
+
+<!ELEMENT name (lastname,firstname)>
+<!ATTLIST name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT age (#PCDATA)>
+<!ATTLIST age
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT hiredate (#PCDATA)>
+<!ATTLIST hiredate
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT devices (device)+>
+<!ATTLIST devices
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT lastname (#PCDATA)>
+<!ATTLIST lastname
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT firstname (#PCDATA)>
+<!ATTLIST firstname
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT device (item,price)>
+<!ATTLIST device
+  xmlns CDATA #FIXED ''
+  type NMTOKEN #REQUIRED>
+
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item
+  xmlns CDATA #FIXED ''
+  id NMTOKEN #REQUIRED>
+
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price
+  xmlns CDATA #FIXED ''>
